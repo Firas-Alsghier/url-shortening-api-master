@@ -1,0 +1,656 @@
+@use 'variables' as var;
+@use 'mixin' as res;
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+
+	@include res.res(smt) {
+		font-size: 50%;
+	}
+	@include res.res(sm) {
+		font-size: 55%;
+	}
+	@include res.res(xsm) {
+		font-size: 40%;
+	}
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+button {
+	outline: none;
+	border: none;
+}
+
+.new-user {
+	background: var.$cyan;
+	color: white;
+}
+
+.heading-style {
+	font-weight: 700;
+	color: var.$very-dark-violet;
+}
+
+.navbar {
+	font-size: 1.7rem;
+	padding-top: 2rem;
+	@include res.res(xsm) {
+		margin-bottom: 10rem;
+	}
+	@include res.res(smt) {
+		margin-bottom: 10rem;
+	}
+	@include res.res(sm) {
+		margin-bottom: 10rem;
+	}
+	.nav-item:not(:first-of-type) {
+		margin-left: 3rem;
+	}
+	.user {
+		width: 100%;
+		@include res.res(xsm) {
+			margin-top: 2rem;
+		}
+		@include res.res(smt) {
+			margin-top: 2rem;
+		}
+		@include res.res(sm) {
+			margin-top: 2rem;
+		}
+		li {
+			margin: 0 1.5rem;
+		}
+	}
+	li {
+		.color-link {
+			color: var.$grayish-violet;
+		}
+	}
+	.new-user {
+		padding: 1rem 2rem;
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.main {
+	height: 80vh;
+	@include res.res(xsm) {
+		flex-direction: column;
+		height: 85vh;
+	}
+	@include res.res(smt) {
+		flex-direction: column;
+		height: 120vh;
+	}
+	@include res.res(sm) {
+		flex-direction: column;
+		height: 130vh;
+	}
+	.content {
+		width: 60%;
+		order: 1;
+		@include res.res(xsm) {
+			width: 100%;
+			margin-top: 7rem;
+			text-align: center;
+		}
+		@include res.res(smt) {
+			width: 100%;
+			margin-top: 7rem;
+			text-align: center;
+		}
+		@include res.res(sm) {
+			text-align: center;
+			width: 100%;
+			margin-top: 7rem;
+		}
+
+		@include res.res(md) {
+			width: 50%;
+			align-self: flex-end;
+		}
+
+		// @include res.res(lg) {
+		// }
+		.title {
+			font-size: 7rem;
+			@include res.res(xsm) {
+				font-size: 5rem;
+				margin-bottom: 2rem;
+			}
+			@include res.res(smt) {
+				font-size: 6rem;
+				margin-bottom: 2rem;
+			}
+			@include res.res(sm) {
+				font-size: 5rem;
+				margin-bottom: 2rem;
+			}
+
+			@include res.res(md) {
+				font-size: 5.5rem;
+			}
+		}
+		.sub-title {
+			font-size: 2rem;
+			color: var.$grayish-violet;
+			margin-bottom: 3rem;
+			@include res.res(xsm) {
+				font-size: 2.4rem;
+			}
+			@include res.res(smt) {
+				font-size: 2.3rem;
+			}
+			@include res.res(sm) {
+				font-size: 2.5rem;
+			}
+			@include res.res(md) {
+				font-size: 1.7rem;
+			}
+			br {
+				display: none;
+				@include res.res(lg) {
+					display: inline;
+				}
+			}
+		}
+		.main-btn {
+			font-size: 2rem;
+			padding: 1rem 2.5rem;
+			@include res.res(xsm) {
+				font-size: 2.5rem;
+			}
+			@include res.res(smt) {
+				font-size: 2.5rem;
+			}
+			@include res.res(sm) {
+				font-size: 2.7rem;
+			}
+			@include res.res(md) {
+				font-size: 1.5rem;
+			}
+		}
+	}
+	.hero-img {
+		width: 35%;
+		@include res.res(xsm) {
+			width: 100%;
+			img {
+				width: 100%;
+				transform: translateX(7rem);
+			}
+		}
+		@include res.res(smt) {
+			width: 100%;
+			img {
+				width: 100%;
+				transform: translateX(7rem);
+			}
+		}
+		@include res.res(sm) {
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+
+		@include res.res(md) {
+			width: 50%;
+			img {
+				width: 55rem;
+			}
+		}
+	}
+}
+.shorten {
+	background: var.$dark-violet;
+	background-image: url('../images/bg-shorten-desktop.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 0.7rem;
+	margin: auto;
+	height: 14rem;
+	@include res.res(smt) {
+		width: 90%;
+		padding: 0 2rem;
+		margin: 0 auto 0;
+	}
+	@include res.res(xsm) {
+		width: 90%;
+		padding: 0 2rem;
+		margin: 0 auto 0;
+	}
+
+	@include res.res(sm) {
+		width: 90%;
+		padding: 0 2rem;
+		margin: 0 auto 0;
+	}
+	transform: translateY(7rem);
+	&-wrapper {
+		width: 100%;
+	}
+
+	.input-text {
+		.short-link {
+			font-size: 1.7rem;
+			width: 70rem;
+			outline: none;
+			border: none;
+			padding: 1.5rem 2.5rem;
+			border-radius: 0.8rem;
+			margin-right: 2rem;
+			@include res.res(smt) {
+				width: 100%;
+			}
+			@include res.res(xsm) {
+				width: 100%;
+			}
+			@include res.res(sm) {
+				width: 100%;
+			}
+		}
+	}
+
+	.shorten-btn {
+		font-size: 2rem;
+		padding: 1rem 2.7rem;
+		border-radius: 0.9rem;
+		@include res.res(smt) {
+			width: 100%;
+			margin-top: 1rem;
+		}
+		@include res.res(xsm) {
+			width: 100%;
+			margin-top: 1rem;
+		}
+		@include res.res(sm) {
+			width: 100%;
+			margin-top: 1rem;
+		}
+	}
+}
+
+.advanced {
+	background: hsl(230, 25%, 95%);
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+	.link-shorts {
+		.link {
+			width: 82%;
+			background: white;
+			margin-bottom: 1rem;
+			height: 6.2rem;
+			padding: 1.4rem 2.5rem;
+			border-radius: 0.3rem;
+			font-size: 1.8rem;
+			.new-short-link {
+				.new-link {
+					color: var.$cyan;
+					margin: 0 2rem;
+				}
+				button {
+					font-size: 1.6rem;
+					padding: 1rem 2.7rem;
+					border-radius: 0.3rem;
+				}
+			}
+			// .original-link {
+			// 	p {
+
+			// 	}
+			// }
+		}
+	}
+	&-content {
+		margin: 10rem 0;
+	}
+
+	&-title {
+		font-size: 3.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	&-text {
+		font-size: 1.7rem;
+		margin: auto;
+		width: 50rem;
+		color: var.$grayish-violet;
+		@include res.res(xsm) {
+			width: 30rem;
+			font-size: 1.6rem;
+		}
+		@include res.res(smt) {
+			width: 30rem;
+			font-size: 1.6rem;
+		}
+		@include res.res(sm) {
+			width: 30rem;
+			font-size: 1.6rem;
+		}
+	}
+
+	.cards {
+		.mrg {
+			@include res.res(xl) {
+				margin: 0 1.8rem;
+			}
+		}
+		.card {
+			position: relative;
+			width: 30rem;
+			height: 23rem;
+			border-radius: 0.6rem;
+			margin: 0 1rem;
+			padding: 0 1rem;
+			@include res.res(xsm) {
+				margin: 2rem auto;
+				text-align: center;
+			}
+			@include res.res(smt) {
+				margin: 2rem auto;
+				text-align: center;
+			}
+			@include res.res(sm) {
+				margin: 2rem auto;
+				text-align: center;
+			}
+			.icon {
+				width: 6rem;
+				height: 6rem;
+				border-radius: 50%;
+				padding: 3.5rem 3.5rem;
+				text-align: center;
+				background: var.$dark-violet;
+				top: -4rem;
+				left: 2rem;
+				@include res.res(xsm) {
+					left: 40%;
+				}
+				@include res.res(smt) {
+					left: 40%;
+				}
+				@include res.res(sm) {
+					left: 40%;
+				}
+				img {
+					width: 3.7rem;
+				}
+			}
+		}
+		.card-title {
+			margin-left: 2.5rem;
+			@include res.res(xsm) {
+				margin: 0;
+			}
+			@include res.res(smt) {
+				margin: 0;
+			}
+			@include res.res(sm) {
+				margin: 0;
+			}
+			h3 {
+				font-size: 2rem;
+				margin-bottom: 1.5rem;
+			}
+			p {
+				font-size: 1.3rem;
+				color: var.$grayish-violet;
+				@include res.res(xsm) {
+					width: 25rem;
+					margin: auto;
+					font-size: 1.4rem;
+				}
+				@include res.res(smt) {
+					width: 25rem;
+					margin: auto;
+					font-size: 1.4rem;
+				}
+				@include res.res(smt) {
+					width: 25rem;
+					margin: auto;
+					font-size: 1.4rem;
+				}
+			}
+		}
+		.card-1 {
+			transform: translateY(-3rem);
+			&::after {
+				content: '';
+				width: 2.1rem;
+				height: 0.6rem;
+				background: var.$cyan;
+				position: absolute;
+				right: -2.2rem;
+				top: 55%;
+			}
+
+			@include res.res(xsm) {
+				&::after {
+					top: 100%;
+					right: 47%;
+					height: 3.5rem;
+					width: 0.6rem;
+				}
+			}
+			@include res.res(smt) {
+				&::after {
+					top: 100%;
+					right: 47%;
+					height: 3.5rem;
+					width: 0.6rem;
+				}
+			}
+			@include res.res(sm) {
+				&::after {
+					top: 100%;
+					right: 47%;
+					height: 3.5rem;
+					width: 0.6rem;
+				}
+			}
+		}
+		.card-2 {
+			@include res.res(xsm) {
+				&::after {
+					content: '';
+					position: absolute;
+					width: 0.6rem;
+					height: 3.5rem;
+					background: var.$cyan;
+					right: 47%;
+					top: 100%;
+				}
+			}
+			@include res.res(smt) {
+				&::after {
+					content: '';
+					position: absolute;
+					width: 0.6rem;
+					height: 3.5rem;
+					background: var.$cyan;
+					right: 47%;
+					top: 100%;
+				}
+			}
+			@include res.res(sm) {
+				&::after {
+					content: '';
+					position: absolute;
+					width: 0.6rem;
+					height: 3.5rem;
+					background: var.$cyan;
+					right: 47%;
+					top: 100%;
+				}
+			}
+		}
+		.card-3 {
+			transform: translateY(3rem);
+			&::before {
+				content: '';
+				width: 2.1rem;
+				height: 0.6rem;
+				background: var.$cyan;
+				position: absolute;
+				left: -2.2rem;
+				top: 27%;
+			}
+			@include res.res(xsm) {
+				&::before {
+					display: none;
+				}
+			}
+			@include res.res(smt) {
+				&::before {
+					display: none;
+				}
+			}
+			@include res.res(sm) {
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+.boost {
+	height: 30rem;
+	background: var.$dark-violet;
+	background-image: url('../images/bg-boost-desktop.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	h1 {
+		font-size: 4rem;
+		color: white;
+		margin-bottom: 2rem;
+		@include res.res(xsm) {
+			font-size: 3.5rem;
+		}
+		@include res.res(smt) {
+			font-size: 3.5rem;
+		}
+		@include res.res(sm) {
+			font-size: 3.5rem;
+		}
+	}
+
+	.boost-btn {
+		font-size: 1.7rem;
+		padding: 1rem 3rem;
+		border-radius: 2.5rem;
+	}
+}
+
+.footer {
+	background: var.$very-dark-violet;
+	padding-top: 4rem;
+	padding-bottom: 8rem;
+	.footer-logo {
+		// @include res.res(xsm) {
+		// 	margin-bottom: 5rem;
+		// }
+		@include res.res(smt) {
+			margin-bottom: 5rem;
+		}
+		@include res.res(sm) {
+			margin-bottom: 5rem;
+		}
+		img {
+			filter: brightness(500%);
+			@include res.res(xsm) {
+				width: 30%;
+			}
+			@include res.res(smt) {
+				width: 30%;
+			}
+			@include res.res(sm) {
+				width: 30%;
+			}
+		}
+	}
+	ul {
+		.li-title {
+			color: white;
+			font-size: 1.3rem;
+			margin-bottom: 2rem;
+			@include res.res(xsm) {
+				font-size: 1.5rem;
+				margin: 0;
+				margin-top: 3rem;
+				line-height: 3.5;
+			}
+			@include res.res(smt) {
+				font-size: 1.9rem;
+				margin: 0;
+				margin-top: 3rem;
+				line-height: 3.5;
+			}
+			@include res.res(sm) {
+				font-size: 1.9rem;
+				margin: 0;
+				margin-top: 3rem;
+				line-height: 3.5;
+			}
+		}
+		& .text {
+			line-height: 2.4;
+		}
+		& .text a {
+			color: var.$grayish-violet;
+			font-size: 1.1rem;
+			@include res.res(xsm) {
+				font-size: 1.5rem;
+			}
+			@include res.res(smt) {
+				font-size: 1.8rem;
+			}
+			@include res.res(sm) {
+				font-size: 1.5rem;
+			}
+		}
+	}
+	.sol-icon {
+		@include res.res(xsm) {
+			margin-top: 4rem;
+		}
+		@include res.res(smt) {
+			margin-top: 4rem;
+		}
+		@include res.res(sm) {
+			margin-top: 4rem;
+		}
+		li {
+			margin: 0 0.6rem;
+			font-size: 1.8rem;
+			@include res.res(smt) {
+				font-size: 2rem;
+			}
+			@include res.res(sm) {
+				font-size: 2.2rem;
+			}
+			& a {
+				color: white;
+			}
+		}
+	}
+}

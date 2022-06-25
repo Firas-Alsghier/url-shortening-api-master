@@ -1,0 +1,41 @@
+@use './variables' as var;
+
+// $bp-xl: 75em; // 1200px
+// $bp-large: 68.75em; // 1100px
+// $bp-medium: 62em; // 992px
+// $bp-small: 37.5em; // 600px
+// $bp-smallest: 30em; // 480px
+// $bp-smallest-xs: 20em; // 320px
+
+@mixin res($breakpoint) {
+	@if $breakpoint == xsm {
+		@media (min-width: var.$bp-smallest-xs) and (max-width: 29.99em) {
+			@content;
+		}
+	}
+	@if $breakpoint == smt {
+		@media (min-width: var.$bp-smallest) and (max-width: 37.5em) {
+			@content;
+		}
+	}
+	@if $breakpoint == sm {
+		@media (min-width: var.$bp-small) and (max-width: 61.99em) {
+			@content;
+		}
+	}
+	@if $breakpoint == md {
+		@media (min-width: var.$bp-medium) and (max-width: 68.74em) {
+			@content;
+		}
+	}
+	@if $breakpoint == lg {
+		@media (min-width: var.$bp-large) {
+			@content;
+		}
+	}
+	@if $breakpoint == xl {
+		@media (min-width: var.$bp-xl) {
+			@content;
+		}
+	}
+}
