@@ -67,30 +67,47 @@
 				</div>
 			</main>
 			<div class="shorten d-flex align-items-center">
-				<div class="shorten-wrapper d-lg-flex justify-content-lg-center text-center">
+				<div class="shorten-wrapper d-lg-flex justify-content-lg-center text-center" id="shorten-wrapper">
 					<div class="input-text">
-						<input type="text" class="short-link" id="short-link" placeholder="Shorten a link here..." />
+						<input type="text" class="short-link" id="input-link" placeholder="Shorten a link here..." />
+						<p class="warning" id="warning">Please add a link</p>
 					</div>
 					<div class="btn-contianer">
-						<button class="new-user shorten-btn">Shorten It!</button>
+						<button class="new-user shorten-btn" id="btn-link">Shorten It!</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<section class="advanced">
-			<div class="link-shorts d-flex flex-column align-items-center">
-				<div class="link link-1 d-flex justify-content-between">
-					<div class="original-link">
-						<p id="original-link">https://www.frontendmentor.io/</p>
+			<div class="link-shorts d-flex flex-column align-items-center" id="link-shorts">
+				<div class="link hide-link d-flex flex-column flex-lg-row justify-content-between" id="link-1">
+					<div class="original-link align-self-center">
+						<p class="original-link-1"></p>
 					</div>
-					<div class="new-short-link d-flex">
-						<p id="new-link" class="new-link">fasjflsfsdfj</p>
-						<button class="new-user">copy</button>
+					<div class="new-short-link d-lg-flex">
+						<p class="new-link align-self-center new-link-1"></p>
+						<button class="new-user align-self-center">copy</button>
 					</div>
 				</div>
-				<div class="link link-2">dfsfsdf</div>
-				<div class="link link-3">dasdsd</div>
+				<div class="link hide-link d-flex flex-column flex-lg-row justify-content-between" id="link-2">
+					<div class="original-link align-self-center">
+						<p class="original-link-2"></p>
+					</div>
+					<div class="new-short-link d-lg-flex">
+						<p class="new-link align-self-center new-link-2" ></p>
+						<button class="new-user align-self-center">copy</button>
+					</div>
+				</div>
+				<div class="link hide-link d-flex flex-column flex-lg-row justify-content-between" id="link-3">
+					<div class="original-link align-self-center">
+						<p class="original-link-3"></p>
+					</div>
+					<div class="new-short-link d-lg-flex">
+						<p class="new-link align-self-center new-link-3"></p>
+						<button class="new-user align-self-center">copy</button>
+					</div>
+				</div>
 			</div>
 			<div class="advanced-content text-center">
 				<h2 class="advanced-title heading-style">Advanced Statistics</h2>

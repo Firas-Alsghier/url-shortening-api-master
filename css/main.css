@@ -40,13 +40,13 @@ button {
 }
 
 .new-user {
-  background: #2acfcf;
+  background: hsl(180deg, 66%, 49%);
   color: white;
 }
 
 .heading-style {
   font-weight: 700;
-  color: #232127;
+  color: hsl(260deg, 8%, 14%);
 }
 
 .navbar {
@@ -93,7 +93,7 @@ button {
   margin: 0 1.5rem;
 }
 .navbar li .color-link {
-  color: #9e9aa7;
+  color: hsl(257deg, 7%, 63%);
 }
 .navbar .new-user {
   padding: 1rem 2rem;
@@ -182,7 +182,7 @@ button {
 }
 .main .content .sub-title {
   font-size: 2rem;
-  color: #9e9aa7;
+  color: hsl(257deg, 7%, 63%);
   margin-bottom: 3rem;
 }
 @media (min-width: 20em) and (max-width: 29.99em) {
@@ -276,27 +276,30 @@ button {
 }
 
 .shorten {
-  background: #3b3054;
+  background: hsl(257deg, 27%, 26%);
   background-image: url("../images/bg-shorten-desktop.svg");
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 0.7rem;
   margin: auto;
   height: 14rem;
+  padding-top: 4rem;
   transform: translateY(7rem);
-}
-@media (min-width: 30em) and (max-width: 37.5em) {
-  .shorten {
-    width: 90%;
-    padding: 0 2rem;
-    margin: 0 auto 0;
-  }
 }
 @media (min-width: 20em) and (max-width: 29.99em) {
   .shorten {
     width: 90%;
     padding: 0 2rem;
     margin: 0 auto 0;
+    height: 18rem;
+  }
+}
+@media (min-width: 30em) and (max-width: 37.5em) {
+  .shorten {
+    width: 90%;
+    padding: 0 2rem;
+    margin: 0 auto 0;
+    height: 18rem;
   }
 }
 @media (min-width: 37.5em) and (max-width: 61.99em) {
@@ -304,6 +307,7 @@ button {
     width: 90%;
     padding: 0 2rem;
     margin: 0 auto 0;
+    height: 18rem;
   }
 }
 .shorten-wrapper {
@@ -317,34 +321,52 @@ button {
   padding: 1.5rem 2.5rem;
   border-radius: 0.8rem;
   margin-right: 2rem;
-}
-@media (min-width: 30em) and (max-width: 37.5em) {
-  .shorten .input-text .short-link {
-    width: 100%;
-  }
+  margin-bottom: 0.8rem;
 }
 @media (min-width: 20em) and (max-width: 29.99em) {
   .shorten .input-text .short-link {
     width: 100%;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 30em) and (max-width: 37.5em) {
+  .shorten .input-text .short-link {
+    width: 100%;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 37.5em) and (max-width: 61.99em) {
   .shorten .input-text .short-link {
     width: 100%;
+    margin-bottom: 0;
   }
+}
+.shorten .input-text .no-link {
+  outline: 0.3rem solid red;
+}
+.shorten .input-text .no-link::placeholder {
+  color: hsl(0deg, 87%, 67%);
+}
+.shorten .input-text .warning {
+  text-align: left;
+  font-size: 1.6rem;
+  color: hsl(0deg, 87%, 67%);
+  font-style: italic;
+  visibility: hidden;
 }
 .shorten .shorten-btn {
   font-size: 2rem;
   padding: 1rem 2.7rem;
   border-radius: 0.9rem;
+  margin-top: 0.2rem;
 }
-@media (min-width: 30em) and (max-width: 37.5em) {
+@media (min-width: 20em) and (max-width: 29.99em) {
   .shorten .shorten-btn {
     width: 100%;
     margin-top: 1rem;
   }
 }
-@media (min-width: 20em) and (max-width: 29.99em) {
+@media (min-width: 30em) and (max-width: 37.5em) {
   .shorten .shorten-btn {
     width: 100%;
     margin-top: 1rem;
@@ -358,27 +380,150 @@ button {
 }
 
 .advanced {
-  background: #eff0f5;
+  background: hsl(230deg, 25%, 95%);
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
+.advanced .link-shorts .hide-link {
+  display: none !important;
+}
 .advanced .link-shorts .link {
-  width: 82%;
+  width: 80%;
   background: white;
-  margin-bottom: 1rem;
-  height: 6.2rem;
-  padding: 1.4rem 2.5rem;
+  margin-bottom: 2rem;
+  height: 6.4rem;
+  padding: 1rem 2.5rem;
   border-radius: 0.3rem;
   font-size: 1.8rem;
 }
+@media (min-width: 20em) and (max-width: 29.99em) {
+  .advanced .link-shorts .link {
+    width: 80%;
+    max-width: 65rem;
+    height: 20rem;
+    padding: 2rem 0;
+  }
+}
+@media (min-width: 30em) and (max-width: 37.5em) {
+  .advanced .link-shorts .link {
+    width: 80%;
+    max-width: 65rem;
+    height: 20rem;
+    padding: 2rem 0;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 61.99em) {
+  .advanced .link-shorts .link {
+    width: 70%;
+    max-width: 65%;
+    height: 20rem;
+    padding: 2rem 0;
+  }
+}
+@media (min-width: 20em) and (max-width: 29.99em) {
+  .advanced .link-shorts .link .original-link {
+    word-break: break-all;
+    border-bottom: 0.2rem solid hsl(0deg, 0%, 75%);
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 30em) and (max-width: 37.5em) {
+  .advanced .link-shorts .link .original-link {
+    word-break: break-all;
+    border-bottom: 0.2rem solid hsl(0deg, 0%, 75%);
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 61.99em) {
+  .advanced .link-shorts .link .original-link {
+    word-break: break-all;
+    border-bottom: 0.2rem solid hsl(0deg, 0%, 75%);
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+}
+.advanced .link-shorts .link .original-link p {
+  margin: 0;
+}
+@media (min-width: 20em) and (max-width: 29.99em) {
+  .advanced .link-shorts .link .original-link p {
+    padding: 0 2rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 30em) and (max-width: 37.5em) {
+  .advanced .link-shorts .link .original-link p {
+    padding: 0 2rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 61.99em) {
+  .advanced .link-shorts .link .original-link p {
+    padding: 0 2rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 29.99em) {
+  .advanced .link-shorts .link .new-short-link {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 30em) and (max-width: 37.5em) {
+  .advanced .link-shorts .link .new-short-link {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 61.99em) {
+  .advanced .link-shorts .link .new-short-link {
+    padding: 0 2rem;
+  }
+}
 .advanced .link-shorts .link .new-short-link .new-link {
-  color: #2acfcf;
+  color: hsl(180deg, 66%, 49%);
   margin: 0 2rem;
 }
+@media (min-width: 20em) and (max-width: 29.99em) {
+  .advanced .link-shorts .link .new-short-link .new-link {
+    font-size: 2.3rem;
+    margin: 1.5rem 0;
+  }
+}
+@media (min-width: 30em) and (max-width: 37.5em) {
+  .advanced .link-shorts .link .new-short-link .new-link {
+    font-size: 2.3rem;
+    margin: 1.5rem 0;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 61.99em) {
+  .advanced .link-shorts .link .new-short-link .new-link {
+    font-size: 2.3rem;
+    margin: 1.5rem 0;
+  }
+}
 .advanced .link-shorts .link .new-short-link button {
-  font-size: 1.6rem;
-  padding: 1rem 2.7rem;
-  border-radius: 0.3rem;
+  font-size: 1.8rem;
+  padding: 0.8rem 2.7rem;
+  border-radius: 0.4rem;
+}
+@media (min-width: 20em) and (max-width: 29.99em) {
+  .advanced .link-shorts .link .new-short-link button {
+    width: 100%;
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 30em) and (max-width: 37.5em) {
+  .advanced .link-shorts .link .new-short-link button {
+    width: 100%;
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 37.5em) and (max-width: 61.99em) {
+  .advanced .link-shorts .link .new-short-link button {
+    width: 100%;
+    font-size: 2.3rem;
+  }
 }
 .advanced-content {
   margin: 10rem 0;
@@ -391,7 +536,7 @@ button {
   font-size: 1.7rem;
   margin: auto;
   width: 50rem;
-  color: #9e9aa7;
+  color: hsl(257deg, 7%, 63%);
 }
 @media (min-width: 20em) and (max-width: 29.99em) {
   .advanced-text {
@@ -448,7 +593,7 @@ button {
   border-radius: 50%;
   padding: 3.5rem 3.5rem;
   text-align: center;
-  background: #3b3054;
+  background: hsl(257deg, 27%, 26%);
   top: -4rem;
   left: 2rem;
 }
@@ -494,7 +639,7 @@ button {
 }
 .advanced .cards .card-title p {
   font-size: 1.3rem;
-  color: #9e9aa7;
+  color: hsl(257deg, 7%, 63%);
 }
 @media (min-width: 20em) and (max-width: 29.99em) {
   .advanced .cards .card-title p {
@@ -524,7 +669,7 @@ button {
   content: "";
   width: 2.1rem;
   height: 0.6rem;
-  background: #2acfcf;
+  background: hsl(180deg, 66%, 49%);
   position: absolute;
   right: -2.2rem;
   top: 55%;
@@ -559,7 +704,7 @@ button {
     position: absolute;
     width: 0.6rem;
     height: 3.5rem;
-    background: #2acfcf;
+    background: hsl(180deg, 66%, 49%);
     right: 47%;
     top: 100%;
   }
@@ -570,7 +715,7 @@ button {
     position: absolute;
     width: 0.6rem;
     height: 3.5rem;
-    background: #2acfcf;
+    background: hsl(180deg, 66%, 49%);
     right: 47%;
     top: 100%;
   }
@@ -581,7 +726,7 @@ button {
     position: absolute;
     width: 0.6rem;
     height: 3.5rem;
-    background: #2acfcf;
+    background: hsl(180deg, 66%, 49%);
     right: 47%;
     top: 100%;
   }
@@ -593,7 +738,7 @@ button {
   content: "";
   width: 2.1rem;
   height: 0.6rem;
-  background: #2acfcf;
+  background: hsl(180deg, 66%, 49%);
   position: absolute;
   left: -2.2rem;
   top: 27%;
@@ -616,7 +761,7 @@ button {
 
 .boost {
   height: 30rem;
-  background: #3b3054;
+  background: hsl(257deg, 27%, 26%);
   background-image: url("../images/bg-boost-desktop.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -649,7 +794,7 @@ button {
 }
 
 .footer {
-  background: #232127;
+  background: hsl(260deg, 8%, 14%);
   padding-top: 4rem;
   padding-bottom: 8rem;
 }
@@ -714,7 +859,7 @@ button {
   line-height: 2.4;
 }
 .footer ul .text a {
-  color: #9e9aa7;
+  color: hsl(257deg, 7%, 63%);
   font-size: 1.1rem;
 }
 @media (min-width: 20em) and (max-width: 29.99em) {
